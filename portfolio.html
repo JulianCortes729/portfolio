@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julián Cortés | Game Developer</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #4f8ef7; /* Azul tipo Unity */
+            --hover: #6b9eff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 2rem; }
+        
+        /* Contenedor principal */
+        .container { max-width: 800px; margin: 0 auto; }
+
+        /* Header */
+        header { margin-bottom: 4rem; border-left: 4px solid var(--accent); padding-left: 1rem; }
+        h1 { font-size: 2.5rem; font-weight: 700; color: #fff; }
+        .subtitle { color: var(--text-secondary); font-size: 1.1rem; }
+
+        /* Grid de Proyectos */
+        .projects-grid { display: grid; gap: 2rem; }
+        
+        /* Tarjeta de Juego */
+        .game-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column; /* Mobile first */
+        }
+        
+        .game-card:hover { transform: translateY(-3px); }
+
+        .game-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #333; /* Placeholder color */
+        }
+
+        .game-content { padding: 1.5rem; }
+        
+        .game-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff; }
+        
+        .tags { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .tag { 
+            font-size: 0.75rem; 
+            background: #333; 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            color: var(--accent);
+            border: 1px solid #333;
+        }
+
+        .game-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+        .links { display: flex; gap: 1rem; }
+        
+        .btn {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-primary { background-color: var(--accent); }
+        .btn-primary:hover { background-color: var(--hover); }
+        
+        .btn-outline { border: 1px solid #555; color: var(--text-secondary); }
+        .btn-outline:hover { border-color: #fff; color: #fff; }
+
+        /* Footer */
+        footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #333; text-align: center; color: var(--text-secondary); font-size: 0.9rem; }
+        .social-link { color: var(--text-main); text-decoration: none; margin: 0 10px; }
+        .social-link:hover { color: var(--accent); }
+
+        /* Desktop Layout */
+        @media (min-width: 600px) {
+            .game-card { flex-direction: row; }
+            .game-img { width: 300px; height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Julián Cortés</h1>
+            <p class="subtitle">Unity Developer | Game Designer in training</p>
+        </header>
+
+        <section class="projects-grid">
+            
+            <article class="game-card">
+                <img src="captura_juego.png" alt="C-M-ON Gameplay" class="game-img">
+                
+                <div class="game-content">
+                    <h2 class="game-title">C-M-ON 🕷️</h2>
+                    <div class="tags">
+                        <span class="tag">Unity 3D</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Platformer</span>
+                        <span class="tag">Talento Tech</span>
+                    </div>
+                    <p class="game-desc">
+                        Un plataformero 3D de acción y precisión. Escala edificios futuristas, esquiva trampas mortales y enfréntate a jefes mecánicos en esta demo técnica enfocada en mecánicas de movimiento y combate.
+                    </p>
+                    <div class="links">
+                        <a href="https://play.unity.com/en/games/c9c5e95f-bb60-4f34-816d-dd38df96bf3d/c-m-on" class="btn btn-primary" target="_blank">► Jugar Online</a>
+                        <a href="LINK_A_TU_REPO_GITHUB" class="btn btn-outline" target="_blank">Ver Código</a>
+                    </div>
+                </div>
+            </article>
+
+            </section>
+
+        <footer>
+            <p>© 2025 Julián Cortés.</p>
+            <br>
+            <a href="LINK_A_TU_LINKEDIN" class="social-link">LinkedIn</a>
+            <a href="LINK_A_TU_GITHUB" class="social-link">GitHub</a>
+            <a href="mailto:tuemail@ejemplo.com" class="social-link">Email</a>
+        </footer>
+    </div>
+
+</body>
+</html>
