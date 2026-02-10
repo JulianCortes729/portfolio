@@ -10,7 +10,7 @@
             --card-bg: #1e1e1e;
             --text-main: #e0e0e0;
             --text-secondary: #a0a0a0;
-            --accent: #4f8ef7; /* Azul tipo Unity */
+            --accent: #4f8ef7; 
             --hover: #6b9eff;
         }
 
@@ -36,15 +36,15 @@
             overflow: hidden;
             transition: transform 0.2s ease;
             display: flex;
-            flex-direction: column; /* Mobile first */
+            flex-direction: column; 
         }
         
         .game-card:hover { transform: translateY(-3px); }
 
         .game-img {
             width: 100%;
-            height: auto; /* CAMBIO: La altura ahora es automática */
-            aspect-ratio: 16/9; /* Mantiene formato panorámico (opcional) */
+            height: auto; 
+            aspect-ratio: 16/9; 
             object-fit: cover; 
             object-position: center;
             background-color: #333; 
@@ -93,13 +93,13 @@
         @media (min-width: 600px) {
             .game-card { 
                 flex-direction: row; 
-                align-items: stretch; /* Estira las cajas para que midan lo mismo */
+                align-items: stretch; 
             }
             .game-img { 
-                width: 350px; /* Un poco más ancho en PC */
-                height: auto; /* Deja que la imagen mande en la altura */
-                aspect-ratio: auto; /* Resetea el ratio forzado */
-                object-fit: cover; /* O usa 'contain' si quieres ver CADA pixel sin recorte */
+                width: 350px; 
+                height: auto; 
+                aspect-ratio: auto; 
+                object-fit: contain; 
             }
         }
     </style>
@@ -175,6 +175,7 @@
 </body>
 
 </html>
+
 
 
 
