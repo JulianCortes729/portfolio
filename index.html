@@ -19,7 +19,7 @@
         body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 2rem; }
         
         /* Contenedor principal */
-        .container { max-width: 800px; margin: 0 auto; }
+        .container { max-width: 1000px; margin: 0 auto; }
 
         /* Header */
         header { margin-bottom: 4rem; border-left: 4px solid var(--accent); padding-left: 1rem; }
@@ -53,6 +53,24 @@
         .game-content { padding: 1.5rem; }
         
         .game-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff; }
+
+        /* Modificador para tarjetas que usan video en formato grande */
+        .game-card.video-card {
+            flex-direction: column; 
+            align-items: stretch;
+            max-width: 1000px; 
+        }
+
+        .game-card.video-card .game-img {
+            width: 100%; 
+            height: auto; /* Esto mantiene la proporción original del video */
+            border-radius: 8px 8px 0 0;
+            display: block; /* Elimina un pequeño margen invisible que a veces dejan los videos */
+        }
+
+        .game-card.video-card .game-content {
+            padding: 20px; 
+        }
         
         .tags { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
         .tag { 
@@ -109,7 +127,7 @@
     <div class="container">
         <header>
             <h1>Julián Cortés</h1>
-            <p class="subtitle">Programador de Videojuegos Junior | Unity 3D | C#</p>
+            <p class="subtitle">Programador de Videojuegos Junior | Unity 3D-2D | C#</p>
         </header>
 
         <section class="projects-grid">
@@ -136,9 +154,11 @@
                 </div>
             </article>
 
-            <article class="game-card">
-                <img src="Icon_77.000.png" alt="77.000 Gameplay" class="game-img">
-                
+            <article class="game-card video-card" >
+                <video class="game-img" autoplay loop muted playsinline>
+                    <source src="Video_77.000.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
                 <div class="game-content">
                     <h2 class="game-title">77.000 🔥</h2>
                     <div class="tags">
